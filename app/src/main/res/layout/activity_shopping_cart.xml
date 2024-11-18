@@ -1,0 +1,531 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ShoppingCartActivity">
+
+    <!-- Toolbar -->
+    <RelativeLayout
+        android:id="@+id/layoutToolbarCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white">
+
+        <ImageView
+            android:id="@+id/ivBackCart"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginVertical="10dp"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/ic_arrow_back" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="Keranjang Saya"
+            android:textColor="@color/black"
+            android:textSize="22sp" />
+
+    </RelativeLayout>
+    <!-- Daftar Produk -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/cardControlShoppingCart"
+        android:layout_below="@+id/layoutToolbarCart">
+
+        <LinearLayout
+            android:id="@+id/linearLayoutCartItems"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Produk 1 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <!-- Tombol - -->
+                    <ImageView
+                        android:id="@+id/ivMinusICart1"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_check_circle"
+                        android:layout_gravity="center_vertical"
+                        android:clickable="true"
+                        android:contentDescription="Decrease Quantity" />
+
+                    <!-- Gambar Produk -->
+                    <ImageView
+                        android:id="@+id/ivProductImageICart1"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/batikcw" />
+
+                    <!-- Deskripsi Produk -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <TextView
+                            android:id="@+id/tvProductTitleICart1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Batik Wanita"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvProductSellerICart1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Batik Trusmi"
+                            android:textSize="14sp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvProductPriceICart1"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 160.000"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Kuantitas Produk dengan Tombol + dan - -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="8dp">
+
+                        <!-- Tombol - -->
+                        <ImageView
+                            android:id="@+id/ivMinusICart1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_minus"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+                            android:contentDescription="Decrease Quantity"
+                            android:layout_marginEnd="8dp"/>
+
+                        <!-- EditText Kuantitas -->
+                        <EditText
+                            android:id="@+id/etNumProductICart1"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:inputType="number"
+                            android:gravity="center"
+                            android:textSize="14sp"
+                            android:background="@drawable/background_edittext"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp" />
+
+                        <!-- Tombol + -->
+                        <ImageView
+                            android:id="@+id/ivAddICart1"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_add"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+                            android:contentDescription="Increase Quantity" />
+                    </LinearLayout>
+
+                    <!-- Hapus Produk -->
+                    <ImageView
+                        android:id="@+id/ivDeleteProductICart1"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/ic_baseline_delete_24"
+                        android:contentDescription="Delete" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Produk 2 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <!-- Tombol - -->
+                    <ImageView
+                        android:id="@+id/ivMinusICart2"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_check_circle"
+                        android:layout_gravity="center_vertical"
+                        android:clickable="true"
+                        android:contentDescription="Decrease Quantity" />
+
+                    <!-- Gambar Produk -->
+                    <ImageView
+                        android:id="@+id/ivProductImageICart2"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/celanajeans" />
+
+                    <!-- Deskripsi Produk -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <TextView
+                            android:id="@+id/tvProductTitleICart2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Jeans Wanita"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvProductSellerICart2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Levi's"
+                            android:textSize="14sp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvProductPriceICart2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 120.000"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Kuantitas Produk dengan Tombol + dan - -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="8dp">
+
+                        <!-- Tombol - -->
+                        <ImageView
+                            android:id="@+id/ivMinusICart2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_minus"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+                            android:contentDescription="Decrease Quantity"
+                            android:layout_marginEnd="8dp"/>
+
+                        <!-- EditText Kuantitas -->
+                        <EditText
+                            android:id="@+id/etNumProductICart2"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="2"
+                            android:inputType="number"
+                            android:gravity="center"
+                            android:textSize="14sp"
+                            android:background="@drawable/background_edittext"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp" />
+
+                        <!-- Tombol + -->
+                        <ImageView
+                            android:id="@+id/ivAddICart2"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_add"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+                            android:contentDescription="Increase Quantity" />
+                    </LinearLayout>
+
+                    <!-- Hapus Produk -->
+                    <ImageView
+                        android:id="@+id/ivDeleteProductICart2"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/ic_baseline_delete_24"
+                        android:contentDescription="Delete" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <!-- Produk 3 -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardElevation="4dp"
+                app:cardCornerRadius="8dp"
+                android:layout_margin="8dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <!-- Tombol - -->
+                    <ImageView
+                        android:id="@+id/ivMinusICart3"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:src="@drawable/ic_circle_black"
+                        android:layout_gravity="center_vertical"
+                        android:clickable="true"
+                        android:contentDescription="Decrease Quantity" />
+
+                    <!-- Gambar Produk -->
+                    <ImageView
+                        android:id="@+id/ivProductImageICart3"
+                        android:layout_width="80dp"
+                        android:layout_height="80dp"
+                        android:src="@drawable/hoodiecw" /> <!-- Ganti dengan gambar produk yang sesuai -->
+
+                    <!-- Deskripsi Produk -->
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="16dp">
+
+                        <TextView
+                            android:id="@+id/tvProductTitleICart3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Hoodie Wanita"
+                            android:textSize="16sp"
+                            android:textStyle="bold"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvProductSellerICart3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Swepo"
+                            android:textSize="14sp"
+                            android:textColor="@color/black" />
+
+                        <TextView
+                            android:id="@+id/tvProductPriceICart3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rp 80.000"
+                            android:textSize="14sp"
+                            android:textColor="@color/black"
+                            android:textStyle="bold" />
+
+                    </LinearLayout>
+
+                    <!-- Kuantitas Produk dengan Tombol + dan - -->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="8dp">
+
+                        <!-- Tombol - -->
+                        <ImageView
+                            android:id="@+id/ivMinusICart3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_minus"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+                            android:contentDescription="Decrease Quantity"
+                            android:layout_marginEnd="8dp"/>
+
+                        <!-- EditText Kuantitas -->
+                        <EditText
+                            android:id="@+id/etNumProductICart3"
+                            android:layout_width="60dp"
+                            android:layout_height="wrap_content"
+                            android:text="1"
+                            android:inputType="number"
+                            android:gravity="center"
+                            android:textSize="14sp"
+                            android:background="@drawable/background_edittext"
+                            android:layout_marginStart="8dp"
+                            android:layout_marginEnd="8dp" />
+
+                        <!-- Tombol + -->
+                        <ImageView
+                            android:id="@+id/ivAddICart3"
+                            android:layout_width="30dp"
+                            android:layout_height="30dp"
+                            android:src="@drawable/ic_add"
+                            android:layout_gravity="center_vertical"
+                            android:clickable="true"
+                            android:contentDescription="Increase Quantity" />
+                    </LinearLayout>
+
+                    <!-- Hapus Produk -->
+                    <ImageView
+                        android:id="@+id/ivDeleteProductICart3"
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:layout_marginStart="16dp"
+                        android:src="@drawable/ic_baseline_delete_24"
+                        android:contentDescription="Delete" />
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <!-- Footer (Total dan Tombol Checkout) -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cardControlShoppingCart"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardElevation="10dp"
+        android:layout_alignParentBottom="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:orientation="vertical">
+
+            <!-- Checkbox Pilih Semua -->
+            <CheckBox
+                android:id="@+id/cbSelectAllCart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="15dp"
+                android:paddingStart="5dp"
+                android:text="Pilih Semua"
+                android:textSize="18sp" />
+
+            <!-- Voucher -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="10dp">
+
+                <TextView
+                    android:id="@+id/tvCouponCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Voucher"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <EditText
+                    android:id="@+id/etCouponCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginEnd="40dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginStart="50dp"
+                    android:layout_toEndOf="@id/tvCouponCart"
+                    android:background="@drawable/background_edittext"
+                    android:inputType="textCapCharacters"
+                    android:text="HAPPYNEWYEAR2025"
+                    android:maxLength="100"
+                    android:paddingHorizontal="10dp" />
+
+                <ImageView
+                    android:id="@+id/ivCheckCouponCart"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_alignParentEnd="true"
+                    android:src="@drawable/ic_check_circle"
+                    app:tint="@color/light_green"
+                    android:layout_centerVertical="true" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.divider.MaterialDivider
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginVertical="15dp" />
+
+            <!-- Total Harga -->
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:text="Total"
+                    android:textStyle="bold"
+                    android:textColor="@color/black"
+                    android:textSize="20sp" />
+
+                <TextView
+                    android:id="@+id/tvTotalCart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:text="Rp 400.000"
+                    android:textColor="@color/normal_orange"
+                    android:textSize="20sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <!-- Tombol Checkout -->
+            <Button
+                android:id="@+id/btnBuyCart"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginBottom="10dp"
+                android:text="Checkout"
+                android:backgroundTint="#00B140"
+                android:textSize="18sp" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+</RelativeLayout>
