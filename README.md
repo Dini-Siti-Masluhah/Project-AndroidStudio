@@ -17,6 +17,12 @@ Aplikasi ini berisi daftar produk pakaian wanita seperti atasan wanita, celana w
 - Keranjang Belanja: Keranjang belanja atau layar “Keranjang Saya” berisi daftar item yang telah ditambahkan pengguna, dengan jumlah dan jumlah total pesanan. Layar ini juga menyertakan kolom untuk memasukkan voucher/kupon.
 - Pembayaran: Meskipun tidak secara eksplisit ditampilkan dalam gambar, keberadaan tombol “CHECKOUT” menunjukkan bahwa aplikasi kemungkinan memiliki proses checkout untuk menyelesaikan pembelian.
 
+## Fitur fitur yang digunakan dalam aplikasi ini juga beragam seperti : 
+- Komponen UI: Aplikasi ini menggunakan elemen UI seluler yang umum seperti ImageView, TextInputEditText, Button, dan BottomNavigationView dalam desainnya.
+- Recyclerview dengan ukuran rentang variabel untuk menampilkan produk.
+- Bilah Pencarian dan tampilan flash sale produk
+- Menambah/Mengurangi jumlah produk di keranjang.
+
 ## Beberapa screenshot menu yang terdapat pada aplikasi Dini Shop
 
 |                 Daftar              |                Login              |        Forgot Password         |
